@@ -18,7 +18,7 @@ class Account extends Model {
             case 'FACEBOOK':
                 icon = 'facebook-official';
                 color = '#355089';
-                picture = `http://graph.facebook.com/v2.7/${this.account_identifier}/picture`;
+                picture = `//graph.facebook.com/v2.7/${this.account_identifier}/picture`;
                 break;
 
             case 'GOOGLE':

@@ -5,10 +5,10 @@
     "/**": "index.html"
   },
   "proxies": {
-    "/graphql/": {
+    "/graphql": {
       "origin": "https://${API_APP_NAME}.herokuapp.com/graphql"
     },
-    "/login/": {
+    "/login": {
       "origin": "https://${API_APP_NAME}.herokuapp.com/login"
     }
   }

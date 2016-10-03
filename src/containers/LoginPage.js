@@ -10,7 +10,7 @@ class LoginPage extends Component {
     }
 
     onLogin({email, password}, cb) {
-        fetch('/login', {
+        fetch('/api/login', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',

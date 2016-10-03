@@ -1,0 +1,32 @@
+body {
+}
+
+
+.panel-heading h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: normal;
+    width: 75%;
+    padding-top: 8px;
+}
+
+.panel-heading .badge {
+    margin-bottom: 3px;
+}
+
+.fa-6x {
+    font-size: 6em;
+}
+
+.account__icon {
+    padding: 20px 25px;
+    cursor: pointer;
+
+}
+
+.account__icon:hover {
+    border: solid 1px #eeeeee;
+    border-radius: .1em;
+    padding: 19px 24px;
+}

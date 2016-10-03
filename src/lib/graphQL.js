@@ -50,16 +50,18 @@ const graphQL = (query, variables) => {
     })
         .then(response =>
             response.json().then(json => ({json, response}))
-        ).then(({json, response}) => {
+        )
+        .then(({json, response}) => {
+
             if (!response.ok) {
-                return Promise.reject(json)
+                return Promise.reject({json, response})
             }
 
             if (json.errors) {
                 return Promise.reject(json.errors)
             }
 
-            return json.data
+            return json.data;
         })
 };
 

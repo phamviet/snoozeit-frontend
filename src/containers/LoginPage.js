@@ -27,6 +27,9 @@ class LoginPage extends Component {
                 this.onSuccess();
             }
         }, cb)
+            .catch(() => {
+                cb('Unexpected error')
+            })
     }
 
     onSuccess() {
@@ -35,7 +38,6 @@ class LoginPage extends Component {
         if (location.state && location.state.nextPathname) {
             this.props.router.replace(location.state.nextPathname)
         } else {
-            // location.href = '/';
             this.props.router.replace('/')
         }
     }

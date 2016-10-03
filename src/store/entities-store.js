@@ -70,11 +70,12 @@ const EntitiesStore = Reflux.createStore({
 
     initialize (trigger) {
         var self = this;
-        graphQL('query{ me { ...userInfo, accounts {...accountInfo} } }')
+        return graphQL('query{ me { ...userInfo, accounts {...accountInfo} } }')
             .then(function (data) {
                 const normalized = normalize(data.me, Schemas.USER);
                 merge(self.entities, normalized.entities);
-                trigger(normalized.result);
+
+                return normalized.result;
             });
     }
 });

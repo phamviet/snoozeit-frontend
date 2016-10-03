@@ -40,7 +40,7 @@ class MainPage extends Component {
         if (viewerStore.isAuthenticated()) {
             this.setState({initialized: true})
         } else {
-            this.props.router.push('/login');
+            this.props.router.replace('/login');
         }
     }
 

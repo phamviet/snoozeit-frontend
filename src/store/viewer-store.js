@@ -8,14 +8,20 @@ const ViewerStore = Reflux.createStore({
         this.user = null;
         this.listenTo(Actions.initialize, this.initialize);
         this.onInitialized = this.onInitialized.bind(this);
+        this.onFailed = this.onFailed.bind(this);
     },
 
     initialize(){
-        entitiesStore.initialize(this.onInitialized);
+        entitiesStore.initialize()
+            .then(this.onInitialized)
+            .catch(this.onFailed);
     },
 
     onInitialized(uuid){
         this.user = entitiesStore.getUser(uuid);
+        this.trigger();
+    },
+    onFailed(errors) {
         this.trigger();
     },
 

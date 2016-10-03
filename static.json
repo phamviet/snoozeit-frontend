@@ -8,7 +8,7 @@
     "/graphql": {
       "origin": "https://${API_APP_NAME}.herokuapp.com/graphql"
     },
-    "/login": {
+    "/api/login": {
       "origin": "https://${API_APP_NAME}.herokuapp.com/login"
     }
   }

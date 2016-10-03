@@ -1,5 +1,6 @@
 {
   "root": "build/",
+  "https_only": true,
   "proxies": {
     "/graphql/": {
       "origin": "https://${API_APP_NAME}.herokuapp.com/"

@@ -1,12 +1,15 @@
 {
   "root": "build/",
   "https_only": true,
+  "routes": {
+    "/**": "index.html"
+  },
   "proxies": {
     "/graphql/": {
-      "origin": "https://${API_APP_NAME}.herokuapp.com/"
+      "origin": "https://${API_APP_NAME}.herokuapp.com/graphql"
     },
     "/login/": {
-      "origin": "https://${API_APP_NAME}.herokuapp.com/"
+      "origin": "https://${API_APP_NAME}.herokuapp.com/login"
     }
   }
 }

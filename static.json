@@ -1,0 +1,11 @@
+{
+  "root": "build/",
+  "proxies": {
+    "/graphql/": {
+      "origin": "https://${API_APP_NAME}.herokuapp.com/"
+    },
+    "/login/": {
+      "origin": "https://${API_APP_NAME}.herokuapp.com/"
+    }
+  }
+}

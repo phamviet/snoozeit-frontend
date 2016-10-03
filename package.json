@@ -33,5 +33,9 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://snoozeit.herokuapp.com/"
+  "proxy": "https://snoozeit.herokuapp.com/",
+  "engines": {
+    "node": "6.6.0",
+    "npm": "3.10.8"
+  }
 }
